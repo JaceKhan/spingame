@@ -78,8 +78,8 @@ function drawRoulette() {
         ctx.textAlign = 'right';
         ctx.textBaseline = 'middle';
         ctx.fillStyle = textColors[index % textColors.length];
-        // 글씨를 적당한 크기로, 두껍게 (70%로 축소)
-        ctx.font = `bold ${Math.floor(radius * 0.112)}px NEXONLv1Gothic`;
+        // 글씨를 적당한 크기로, 두껍게 (60%로 축소)
+        ctx.font = `bold ${Math.floor(radius * 0.09)}px NEXONLv1Gothic`;
         // 텍스트 위치: 원의 바깥쪽 80% 지점에 배치
         const textRadius = radius * 0.8;
         ctx.fillText(item, textRadius, 0);
