@@ -75,13 +75,14 @@ function drawRoulette() {
         ctx.translate(centerX, centerY);
         // 섹터의 중심 각도에 맞춰 회전 (방사형)
         ctx.rotate(startAngle + anglePerItem / 2);
-        ctx.textAlign = 'right';
+        ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillStyle = textColors[index % textColors.length];
-        // 글씨를 적당한 크기로, 두껍게 (60%로 축소)
-        ctx.font = `bold ${Math.floor(radius * 0.09)}px NEXONLv1Gothic`;
-        // 텍스트 위치: 원의 바깥쪽 80% 지점에 배치
-        const textRadius = radius * 0.8;
+        // 글씨를 적당한 크기로, 두껍게
+        ctx.font = `bold ${Math.floor(radius * 0.081)}px NEXONLv1Gothic`;
+        // '당일 녹음숙제 면제권' 텍스트는 원의 중심 쪽으로 더 당김 (radius의 55% 지점)
+        // 다른 텍스트는 기존 위치 유지 (radius의 65% 지점)
+        const textRadius = item === '당일 녹음숙제 면제권' ? radius * 0.55 : radius * 0.65;
         ctx.fillText(item, textRadius, 0);
         ctx.restore();
     });
