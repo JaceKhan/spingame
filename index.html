@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탕정 EIE 어학원 행운의 룰렛!</title>
+    <!-- 웹폰트 넥슨고딕체 적용 -->
+    <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NEXONLv1Gothic.woff2" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- 폭죽 효과를 위한 Canvas.js 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <!-- 메인 컨테이너 -->
+    <div class="container">
+        <!-- 게임 제목 -->
+        <h1 class="title">탕정 EIE 어학원 행운의 룰렛!</h1>
+        <p class="subtitle">버튼을 눌러 행운을 가져가세요</p>
+
+        <!-- 룰렛 결과 표시 영역 -->
+        <div id="result" class="result"></div>
+
+        <!-- 룰렛 컨테이너 -->
+        <div class="roulette-container">
+            <!-- 룰렛 원판 -->
+            <div class="roulette-wheel">
+                <canvas id="rouletteCanvas"></canvas>
+                <!-- 룰렛 포인터 -->
+                <div class="pointer"></div>
+            </div>
+        </div>
+
+        <!-- 시작 버튼 -->
+        <button id="spinButton" class="spin-button">시작</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

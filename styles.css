@@ -1,0 +1,148 @@
+/* 전체 페이지 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NEXONLv1Gothic', sans-serif;
+}
+
+/* 배경 스타일 */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 메인 컨테이너 스타일 */
+.container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 제목 스타일 */
+.title {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    color: #34495e;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* 룰렛 컨테이너 스타일 */
+.roulette-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    aspect-ratio: 1;
+}
+
+/* 룰렛 휠 스타일 */
+.roulette-wheel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* 룰렛 캔버스 스타일 */
+#rouletteCanvas {
+    width: 100%;
+    height: 100%;
+    transition: transform 5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+/* 포인터 스타일 */
+.pointer {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 40px solid #e74c3c;
+    z-index: 2;
+}
+
+/* 결과 표시 영역 스타일 */
+.result {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e74c3c;
+    min-height: 3rem;
+    margin: 1rem 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.result.show {
+    opacity: 1;
+}
+
+/* 시작 버튼 스타일 */
+.spin-button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.spin-button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.spin-button:active {
+    transform: translateY(1px);
+}
+
+.spin-button:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .result {
+        font-size: 1.5rem;
+    }
+
+    .spin-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+} 
